@@ -9,7 +9,6 @@ let mapService;
 async function onInit() {
     onPreloader(false)
     onInitMap();
-    onInitGap();
 }
 
 async function onInitMap() {

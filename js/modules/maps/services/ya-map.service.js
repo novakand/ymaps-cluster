@@ -1,6 +1,5 @@
 
 import { YaAPILoader } from './ya-api-loader.js';
-import { YaGeocodingService } from './ya-geocoding.js';
 
 
 export class YaMapService {
@@ -9,7 +8,6 @@ export class YaMapService {
         this._options = options || {}
         this.loader = new YaAPILoader(this._options.config);
         this.ready = this._apiLoader(htmlElement, this._options);
-        this.geocoding = new YaGeocodingService()
     }
 
     async destroy() {
