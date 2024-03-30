@@ -34,7 +34,7 @@ async function onInit() {
 function onInitobjectManager() {
     objectManager = new ymaps.ObjectManager({
         clusterize: true,
-        gridSize: 160,
+        gridSize: 100,
         clusterDisableClickZoom: true
     });
     objectManager.objects.options.set('preset', 'islands#greenDotIcon');
@@ -55,7 +55,7 @@ function getDeviceMobile() {
 }
 
 async function getData() {
-    const response = await fetch('./data-storage/data.json');
+    const response = await fetch('./data-storage/data.json?cache=1');
     return await response.json();
 }
 
