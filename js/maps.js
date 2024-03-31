@@ -2,6 +2,8 @@ import { YaMapService } from '../js/modules/maps/services/ya-map.service.js';
 import { MapState as state } from '../js/modules/maps/constants/map-state.constant.js'
 import { MapOptions as options } from '../js/modules/maps/constants/map-options.constant.js';
 import { MapConfig as config } from '../js/modules/maps/constants/map-config.constant.js';
+import { default as ObjectManagerOptions } from '../js/modules/maps/constants/map-object-manager-options.js';
+
 
 let map;
 let mapService;
@@ -32,13 +34,7 @@ async function onInit() {
 }
 
 function onInitobjectManager() {
-    objectManager = new ymaps.ObjectManager({
-        clusterize: true,
-        gridSize: 100,
-        clusterDisableClickZoom: true
-    });
-    objectManager.objects.options.set('preset', 'islands#greenDotIcon');
-    objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
+    objectManager = new ymaps.ObjectManager(ObjectManagerOptions());
 }
 
 function onPreloader(isShow) {
