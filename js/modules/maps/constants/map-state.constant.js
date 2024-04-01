@@ -6,6 +6,5 @@
 export const MapState = {
     center: [61.24980542805234, 92.99644336340292],
     zoom: 4,
-    type: 'yandex#map',
-    controls: []
+    type: 'yandex#map'
 }
