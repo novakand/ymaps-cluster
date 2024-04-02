@@ -2,7 +2,7 @@ export default function () {
     const ObjectManagerOptions = {
         clusterize: true,
         gridSize: 100,
-        clusterDisableClickZoom: true,
+        clusterDisableClickZoom: false,
         clusterIcons: [
             {
                 href: './assets/images/cluster-icon.svg',
