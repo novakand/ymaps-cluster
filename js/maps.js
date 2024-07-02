@@ -20,6 +20,7 @@ async function onInit() {
     mapService = new YaMapService('map', mapOptions);
     mapService.ready.then(async (yaMap) => {
         map = yaMap;
+        map.behaviors.disable('ScrollZoom')
         document.querySelector('#map').setAttribute('data-load', true);
         onPreloader(true);
         onInitobjectManager();
